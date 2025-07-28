@@ -9,8 +9,6 @@ body {
   background: linear-gradient(to bottom, #1f2235, #2c1e2e);
   min-height: 100vh;
 }
-
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -39,8 +37,6 @@ header {
   font-weight: bold;
   text-decoration: none;
 }
-
-/* Main Section */
 main {
   text-align: center;
   padding: 80px 20px;
@@ -85,12 +81,76 @@ h1 {
 .btn-red:hover {
   background-color: darkred;
 }
-
-/* Status Bar */
 .status-bar {
   background: linear-gradient(to right, #111, #eee);
   color: black;
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
+.features {
+  padding: 50px 20px;
+  background-color: #111;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.feature.reverse {
+  flex-direction: row-reverse;
+}
+.feature img {
+  width: 400px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.feature .highlight {
+  color: #d45df0;
+}
+.contact-social {
+  text-align: center;
+  background-color: #000;
+  color: white;
+  padding: 40px 20px;
+}
+.contact-social h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.contact-social form {
+  margin-bottom: 30px;
+}
+.contact-social input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.contact-social button {
+  padding: 10px 20px;
+  background-color: #246bfd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
 }
