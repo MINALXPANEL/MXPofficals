@@ -19,7 +19,7 @@
 
   <main>
     <h1>MXP CORPORATION</h1>
-    <p class="subtitle">THE BEST FREE FIRE CHEATS AND SETTINGS TO DOMINATE AND ADVANCE YOR EXPIRIENCE!</p>
+    <p class="subtitle">THE BEST FREE FIRE CHEATS AND SETTINGS!</p>
     <div class="buttons">
       <a href="https://www.mediafire.com/file/m8fngc20v7fnric/NEW.apk/file" class="btn btn-blue" download>Download for Free</a>
       <a href="https://discord.gg/xuSsgP3WJH" class="btn btn-orange" target="_blank">Join Discord Server</a>
@@ -29,8 +29,72 @@
 
   <section class="status-bar">
     <p><strong>THIS IS A SAFE FREE FIRE CHEATS WEBSITE FOR FUTURE GAMERS</strong> Be Ready!</p>
-    <p>Current status: Working/Undetectable</p>
+    <p>Current status: Working/Undetctable</p>
     <p>If you experience any issues, please Info because there will be important fixes there</p>
   </section>
+
+  <section class="features">
+    <div class="feature">
+      <img src="screenshot1.png" alt="Unique Visuals" />
+      <div>
+        <h3><span class="highlight">Unique</span> Visuals</h3>
+        <p>Why have boring visuals when you can have cool ones! We offer strong visual features with various ESP options.</p>
+      </div>
+    </div>
+
+    <div class="feature reverse">
+      <div>
+        <h3><span class="highlight">Easy-to-use</span> Scripts</h3>
+        <p>A wide variety of Lua scripts can extend your game using our native Lua API.</p>
+      </div>
+      <img src="https://images-ext-1.discordapp.net/external/7qfcfgUM2ezu2ih24qQ_dfFBFtshgHqrIH6ym7MKuCY/https/files.catbox.moe/ss8cp4.gif" alt="Easy Scripts" />
+    </div>
+
+    <div class="feature">
+      <img src="screenshot3.png" alt="Luis XIT Media" />
+      <div>
+        <h3><span class="highlight">Luis XIT</span> Media</h3>
+        <p>Showcase your gameplay with Luis XIT. Our users have tons of video proof showing performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-social">
+    <h3>Ask Us Anything</h3>
+    <form id="question-form">
+      <input type="text" id="question" placeholder="Write your question here..." required />
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="social-icons">
+      <a href="https://discord.gg/xuSsgP3WJH" target="_blank"><img src="discord-icon.png" alt="Discord" /></a>
+      <a href="https://wa.me/yourwa" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp" /></a>
+      <a href="https://instagram.com/minal_x_panel" target="_blank"><img src="instagram-icon.png" alt="Instagram" /></a>
+      <a href="https://www.youtube.com/@MINALXPANEL" target="_blank"><img src="youtube-icon.png" alt="YouTube" /></a>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById("question-form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const question = document.getElementById("question").value.trim();
+      if (!question) return;
+
+      const webhookURL = "https://discord.com/api/webhooks/1399368236486885376/9PlnD9spdVS0K8vULyXJcED0ZgarjxKUs39gjbqNvAanl6VGUKvef5cxmKeamOLBIA8H";
+      const payload = {
+        content: `💬 New Visitor Question:\n${question}`
+      };
+
+      await fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      alert("Question sent! We'll respond ASAP.");
+      form.reset();
+    });
+  </script>
 </body>
 </html>
